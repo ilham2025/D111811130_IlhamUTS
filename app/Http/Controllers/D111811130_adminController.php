@@ -16,7 +16,7 @@ class D111811130_adminController extends Controller
         // make response json
         return response() ->json([
             'succes' => true,
-            'message' => 'list data admin',
+            'message' => 'list admin',
             'data' => $admins,
         ], 200);
     }
@@ -29,7 +29,7 @@ class D111811130_adminController extends Controller
         // make response json
         return response () ->json([
             'succes' => true,
-            'message' => 'detail data admin',
+            'message' => 'detail admin',
             'data' => $admin
         ], 200);
     }
@@ -59,7 +59,7 @@ class D111811130_adminController extends Controller
         if($admin) {
             return response()->json([
                 'success' => true,
-                'message' => 'data admin telah dibuat',
+                'message' => 'admin created',
                 'data' => $admin
             ], 201);
         }
@@ -92,7 +92,7 @@ class D111811130_adminController extends Controller
             
             return response()->json([
                 'success' => true,
-                'message' => 'data admin telah di-update',
+                'message' => 'admin updated',
                 'data' => $admin
             ], 200);
         }
@@ -109,14 +109,14 @@ class D111811130_adminController extends Controller
 
             return response()->json([
                 'succes' => true,
-                'message' =>'data admin telah dihapus',
+                'message' =>'admin deleted',
             ], 200);    
         }
 
         // data admin not found 
         return response()-json([
             'success' => false,
-            'message' => 'data admin tidak ditemukan',
+            'message' => 'admin not found',
         ], 404);
     }
 }

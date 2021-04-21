@@ -16,7 +16,7 @@ class D111811130_newsController extends Controller
         // make response json
         return response() ->json([
             'succes' => true,
-            'message' => 'list data news',
+            'message' => 'list news',
             'data' => $news,
         ], 200);
     }
@@ -29,7 +29,7 @@ class D111811130_newsController extends Controller
         // make response json
         return response () ->json([
             'succes' => true,
-            'message' => 'detail data news',
+            'message' => 'detail news',
             'data' => $new
         ], 200);
     }
@@ -61,7 +61,7 @@ class D111811130_newsController extends Controller
         if($new) {
             return response()->json([
                 'success' => true,
-                'message' => 'data news telah dibuat',
+                'message' => 'news created',
                 'data' => $new
             ], 201);
         }
@@ -96,7 +96,7 @@ class D111811130_newsController extends Controller
             
             return response()->json([
                 'success' => true,
-                'message' => 'data news telah di-update',
+                'message' => 'news created',
                 'data' => $new
             ], 200);
         }
@@ -113,14 +113,14 @@ class D111811130_newsController extends Controller
 
             return response()->json([
                 'succes' => true,
-                'message' =>'data news telah dihapus',
+                'message' =>'news deleted',
             ], 200);    
         }
 
         // data news not found 
         return response()-json([
             'success' => false,
-            'message' => 'data news tidak ditemukan',
+            'message' => 'news not found',
         ], 404);
     }
 }
